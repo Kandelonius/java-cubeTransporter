@@ -3,11 +3,11 @@
  * can be shipped and how many containers will be needed based
  * on the dimensions given for the cubes and the containers.
  */
-package java-cubeTransporter
+package cubetransporter;
 
 import java.util.Scanner; // allows the program to interact with a user
 
-public class CubeTransport {
+public class CubeTransporter {
 
 	public static void main(String[] args) {
 		Scanner stdln = new Scanner(System.in); // needs for the scanner

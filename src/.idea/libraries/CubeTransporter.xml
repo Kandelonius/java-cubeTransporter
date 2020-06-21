@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="CubeTransporter">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/CubeTransporter.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

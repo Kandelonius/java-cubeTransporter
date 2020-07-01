@@ -33,6 +33,14 @@ public class BankAccount
         this.phone = phone;
     }
 
+    public BankAccount(
+        String name,
+        String email,
+        String phone)
+    {
+        this(100.55, "customerName", "customerEmail", "666-333-1234");
+    }
+
     public void deposit(double depositAmount)
     {
         this.balance += depositAmount;

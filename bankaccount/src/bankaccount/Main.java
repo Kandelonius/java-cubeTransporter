@@ -11,5 +11,12 @@ public class Main
         shanesAccount.withdrawal(5.0);
         shanesAccount.deposit(13.37);
         System.out.println(shanesAccount.toString());
+
+        VIPCustomer sebastiansAccount = new VIPCustomer();
+        System.out.println(sebastiansAccount.toString());
+        VIPCustomer seansAccount = new VIPCustomer("Sean", "email");
+        System.out.println(seansAccount.toString());
+        VIPCustomer stansAccount = new VIPCustomer("Stan", 1_500_000, "email");
+        System.out.println(stansAccount.toString());
     }
 }

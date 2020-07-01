@@ -11,6 +11,14 @@ public class BankAccount
     private String email;
     private String phone;
 
+    public BankAccount()
+    {
+        this(2.50,
+            "Default name",
+            "Default address",
+            "Default phone");
+    }
+
     public BankAccount(
         double balance,
         String name,

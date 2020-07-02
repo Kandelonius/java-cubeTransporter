@@ -31,9 +31,9 @@ public class Animal
         System.out.println("Aminal.eat() called");
     }
 
-    public void move()
+    public void move(int speed)
     {
-
+        System.out.println("Animal.move() called. Animal is moving at "+speed);
     }
 
     public String getName()

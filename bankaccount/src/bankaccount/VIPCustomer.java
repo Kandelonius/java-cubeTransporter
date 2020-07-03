@@ -6,19 +6,19 @@ public class VIPCustomer
     private double creditLimit;
     private String email;
 
-    public VIPCustomer()
+    public VIPCustomer() // constructor 1
     {
         this("default name", 125_000, "default email");
     }
 
-    public VIPCustomer(
+    public VIPCustomer( // constructor 2
         String name,
         String email)
     {
         this("VIP name",150_000, "VIP email");
     }
 
-    public VIPCustomer(
+    public VIPCustomer( // constructor 3
         String name,
         double creditLimit,
         String email)

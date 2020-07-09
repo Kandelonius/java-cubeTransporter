@@ -60,4 +60,39 @@ public class EmployeeController
         }
         return new ResponseEntity<>(rtnList, HttpStatus.OK);
     }
+    // http://localhost:2019/employees/total
+    @GetMapping(value = "/employees/total",
+        produces = {"application/json"})
+    public ResponseEntity<?> totalSalary()
+    {
+        List<Employee> myList = new ArrayList<>();
+        emprepos.findAll().iterator().forEachRemaining(myList::add);
+
+        double total = 0;
+        for (Employee e : myList)
+        {
+            total = total + e.getSalary();
+        }
+
+        System.out.println("Total Salary " + total);
+
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    // http://localhost:2019/employees/raise/{raise:.+}
+    @GetMapping(value = "/employees/raise/{raise:.+}",
+        produces = {"application/json"})
+    public ResponseEntity<?> estimateRaise(@PathVariable double raise)
+    {
+        List<Employee> myList = new ArrayList<>();
+        emprepos.findAll().iterator().forEachRemaining(myList::add);
+
+        double total = 0;
+        for (Employee e : myList)
+        {
+            e.setSalary(e.getSalary() + (e.getSalary() * raise));
+        }
+
+        return new ResponseEntity<>(myList, HttpStatus.OK);
+    }
 }
